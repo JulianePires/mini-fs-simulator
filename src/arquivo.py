@@ -5,7 +5,7 @@ class Arquivo:
         self.blocos = []
     
     def __repr__(self):
-        return f"Arquivo(nome={self.nome}, tamanho={self.tamanho})"
+        return f"Arquivo(nome={self.nome}, tamanho={self.tamanho} bytes)"
     
     def alocar_blocos(self, blocos):
         self.blocos = blocos

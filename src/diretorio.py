@@ -4,7 +4,7 @@ class Diretorio:
         self.arquivos = []
         
     def __repr__(self):
-        return f"Diretorio(nome={self.nome})"
+        return f"Diretorio(nome={self.nome}, arquivos={self.arquivos})"
     
     def adicionar_arquivo(self, arquivo):
         self.arquivos.append(arquivo)

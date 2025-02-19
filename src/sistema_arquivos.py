@@ -104,12 +104,15 @@ class SistemaDeArquivos:
         if diretorio is None:
             print("Diretório não encontrado.")
             return
+        for arq in diretorio.arquivos:
+            self.excluir_arquivo(arq.nome, diretorio.nome)
         self.diretorios.pop(nome)
         print(f"Diretório '{nome}' excluído com sucesso.")
+        self.simular_alocacao()
 
     def listar_diretorios(self):
         for dir in self.diretorios.values():
-            print(f"Diretório: {dir.nome}")
+            print(dir)
 
     def simular_alocacao(self):
         for bloco in self.blocos:
