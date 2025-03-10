@@ -17,7 +17,11 @@ def main():
         print("6. Listar arquivos")
         print("7. Calcular fragmentação interna")
         print("8. Calcular fragmentação externa")
-        print("9. Sair")
+        print("9. Proteger arquivo com senha")
+        print("10. Acessar arquivo protegido")
+        print("11. Proteger diretório com senha")
+        print("12. Acessar diretório protegido")
+        print("13. Sair")
         opcao = input("Escolha uma opção: ")
         
         if opcao == "1":
@@ -45,6 +49,24 @@ def main():
         elif opcao == "8":
             fs.calcular_fragmentacao_externa()
         elif opcao == "9":
+            nome = input("Digite o nome do arquivo: ")
+            dir = input("Digite o diretório: ")
+            senha = input("Digite a senha: ")
+            fs.proteger_arquivo(nome, dir, senha)
+        elif opcao == "10":
+            nome = input("Digite o nome do arquivo: ")
+            dir = input("Digite o diretório: ")
+            senha = input("Digite a senha: ")
+            fs.acessar_arquivo_protegido(nome, dir, senha)
+        elif opcao == "11":
+            nome = input("Digite o nome do diretório: ")
+            senha = input("Digite a senha: ")
+            fs.proteger_diretorio(nome, senha)
+        elif opcao == "12":
+            nome = input("Digite o nome do diretório: ")
+            senha = input("Digite a senha: ")
+            fs.acessar_diretorio_protegido(nome, senha)
+        elif opcao == "13":
             sys.exit()
         else:
             print("Opção inválida.")
